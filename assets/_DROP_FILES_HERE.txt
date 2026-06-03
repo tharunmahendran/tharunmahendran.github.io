@@ -1,0 +1,25 @@
+Drop your figure images and/or video clips in this "assets" folder.
+
+Suggested names (so I map each to the right slide) — extension can be whatever you have:
+
+  Slide 1  Nature Communications 2026 — Decoupling phase separation & fibrillization
+           figure:  paper1-fig.png   (or .jpg)
+           video:   paper1-clip.mp4  (or .webm / .gif)
+
+  Slide 2  Nature Chemistry 2025 — Homotypic RNA clustering
+           figure:  paper2-fig.png
+           video:   paper2-clip.mp4
+
+  Slide 3  bioRxiv 2025 — Viscoelasticity / stress granules suppress amyloids
+           figure:  paper3-fig.png
+           video:   paper3-clip.mp4
+
+  Slide 4  Frontiers 2020 — Soluble 4R0N Tau & endocytic vesicles
+           figure:  paper4-fig.png
+           video:   paper4-clip.mp4
+
+Notes:
+- Crop to the single most representative panel if you can — full multi-panel
+  figures get cramped at slider size.
+- Videos: short loops (a few seconds) work best; I'll set them muted + autoplay + loop.
+- Don't worry about exact names — if they differ, just tell me which file is which.
