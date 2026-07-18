@@ -120,8 +120,8 @@
     /* HERO RIGHT — slideshow */
     .hero-right { position: relative; background: #07090c; overflow: hidden; display: flex; flex-direction: column; border-left: 1px solid var(--rule); }
     .slideshow { flex: 1; position: relative; overflow: hidden; }
-    .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s ease; display: flex; flex-direction: column; padding: 1.5rem 1.7rem 1.1rem; }
-    .slide.active { opacity: 1; }
+    .slide { position: absolute; inset: 0; opacity: 0; pointer-events: none; transition: opacity 0.8s ease; display: flex; flex-direction: column; padding: 1.5rem 1.7rem 1.1rem; }
+    .slide.active { opacity: 1; pointer-events: auto; z-index: 2; }
     .slide-journal { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
     .slide-title { font-family: var(--serif); font-size: clamp(1rem, 1.6vw, 1.35rem); font-weight: 300; color: rgba(233,234,228,0.95); line-height: 1.3; margin-bottom: 0.7rem; }
     .slide-authors { font-size: 0.75rem; color: rgba(233,234,228,0.45); line-height: 1.5; margin-bottom: 0.6rem; }
