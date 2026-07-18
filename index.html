@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tharun Selvam Mahendran | PhD Researcher in Biophysics & Bioengineering</title>
-  <meta name="description" content="Tharun Selvam Mahendran is a PhD researcher at the State University of New York at Buffalo studying RNA phase transitions, biomolecular condensates, and pathological RNA aggregation. Incoming ODBI Innovator Fellow at Princeton. 157 citations." />
+  <meta name="description" content="Tharun Selvam Mahendran is a PhD researcher at the State University of New York at Buffalo studying RNA phase transitions, biomolecular condensates, and pathological RNA aggregation. Incoming ODBI Innovator Fellow at Princeton. 182 citations." />
   <meta name="keywords" content="Tharun Selvam Mahendran, RNA phase transitions, biomolecular condensates, biophysics, bioengineering, RNA aggregation, stress granules, Princeton, ODBI, Nature Chemistry, Nature Communications" />
   <meta name="author" content="Tharun Selvam Mahendran" />
   <meta name="robots" content="index, follow" />
@@ -120,11 +120,14 @@
     /* HERO RIGHT — slideshow */
     .hero-right { position: relative; background: #07090c; overflow: hidden; display: flex; flex-direction: column; border-left: 1px solid var(--rule); }
     .slideshow { flex: 1; position: relative; overflow: hidden; }
-    .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s ease; display: flex; flex-direction: column; padding: 2.5rem 2rem 1.5rem; }
+    .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s ease; display: flex; flex-direction: column; padding: 1.5rem 1.7rem 1.1rem; }
     .slide.active { opacity: 1; }
     .slide-journal { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
     .slide-title { font-family: var(--serif); font-size: clamp(1rem, 1.6vw, 1.35rem); font-weight: 300; color: rgba(233,234,228,0.95); line-height: 1.3; margin-bottom: 0.7rem; }
     .slide-authors { font-size: 0.75rem; color: rgba(233,234,228,0.45); line-height: 1.5; margin-bottom: 0.6rem; }
+    .slide-summary { margin: 0.15rem 0 0.55rem; padding: 0.6rem 0.85rem; background: rgba(205,250,78,0.05); border-left: 2px solid var(--accent); border-radius: 0 5px 5px 0; }
+    .slide-summary-label { font-family: var(--mono); font-size: 0.54rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 0.25rem; }
+    .slide-summary p { font-family: var(--serif); font-style: italic; font-size: 0.95rem; line-height: 1.5; color: rgba(233,234,228,0.9); }
     .slide-authors strong { color: rgba(233,234,228,0.78); font-weight: 600; }
 
     /* slide figure / schematic — light card framing the science image */
@@ -134,6 +137,51 @@
     .slide-schematic img { width: 100%; height: auto; display: block; border-radius: 4px; }
     .slide-figcredit { font-family: var(--mono); font-size: 0.56rem; letter-spacing: 0.04em; color: #7c776c; margin-top: 0.45rem; text-align: right; }
     .slide-blurb { font-family: var(--serif); font-size: 1.05rem; line-height: 1.55; font-style: italic; color: rgba(233,234,228,0.88); margin: 0.4rem 0 0.9rem; }
+
+    /* enriched science slide — full first figure + videos + key-finding bullets */
+    .slide.active { overflow-y: auto; scrollbar-width: thin; scrollbar-color: rgba(205,250,78,0.35) transparent; }
+    .slide.active::-webkit-scrollbar { width: 7px; }
+    .slide.active::-webkit-scrollbar-thumb { background: rgba(205,250,78,0.3); border-radius: 4px; }
+    .slide-fig { overflow: hidden; margin: 0.45rem 0 0.4rem; padding: 0.55rem; background: var(--card); border: 1px solid rgba(0,0,0,0.12); border-radius: 6px; }
+    .slide-fig img { width: 100%; height: auto; display: block; border-radius: 4px; }
+    .slide-highlights { margin: 0.7rem 0 0.5rem; }
+    .slide-hl-label { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.55rem; }
+    .slide-highlights ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; }
+    .slide-highlights li { position: relative; padding-left: 1.05rem; font-size: 0.82rem; line-height: 1.5; color: rgba(233,234,228,0.82); }
+    .slide-highlights li::before { content: ''; position: absolute; left: 0; top: 0.52em; width: 5px; height: 5px; background: var(--accent); border-radius: 50%; }
+    .slide-highlights li strong { color: var(--ink); font-weight: 600; }
+    .slide-videos { display: grid; gap: 0.7rem; margin: 0.85rem 0 0.6rem; }
+    .slide-vid-label { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(233,234,228,0.5); }
+    .slide-video video { width: 100%; height: auto; display: block; border-radius: 5px; background: #000; border: 1px solid var(--rule); }
+    .slide-vid-cap { font-family: var(--mono); font-size: 0.56rem; color: #8a857a; margin-top: 0.35rem; line-height: 1.4; }
+    .slide-vidlink { display: flex; align-items: center; gap: 0.7rem; padding: 0.7rem 0.85rem; border: 1px dashed var(--rule); border-radius: 6px; text-decoration: none; color: rgba(233,234,228,0.72); font-family: var(--mono); font-size: 0.63rem; letter-spacing: 0.03em; line-height: 1.4; transition: all 0.2s; }
+    .slide-vidlink:hover { border-color: var(--accent); color: var(--accent); background: rgba(205,250,78,0.04); }
+    .slide-vidlink .play { width: 26px; height: 26px; flex: none; border-radius: 50%; background: var(--accent); color: #0b0d11; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; }
+
+    /* 3-block slide: big figure (left) + video/GIF (right-top) + highlights (right-bottom) */
+    .slide-feature { display: grid; grid-template-columns: auto 1fr; gap: 1.4rem; align-items: start; margin: 0.35rem 0 0.4rem; min-height: 0; }
+    .slide-feature .slide-fig { margin: 0; padding: 0; background: transparent; border: none; align-self: start; display: flex; flex-direction: column; align-items: center; min-width: 0; }
+    .slide-feature .slide-fig img { width: auto; height: auto; max-width: 100%; max-height: calc(100vh - 360px); object-fit: contain; border: 1px solid var(--rule); border-radius: 6px; display: block; }
+    .slide-rcol { display: grid; grid-template-rows: auto auto; gap: 0.9rem; min-width: 0; align-content: center; }
+    .slide-media { display: flex; flex-direction: column; justify-content: flex-start; gap: 0.4rem; min-width: 0; }
+    .slide-media-frame { border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); background: #05070a; line-height: 0; }
+    .slide-gif { width: 100%; height: auto; object-fit: contain; display: block; }
+    .slide-vidposter { position: relative; display: block; border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); aspect-ratio: 16 / 9; background-color: #0a0d12; background-size: cover; background-position: center; }
+    .slide-vidposter::before { content: ''; position: absolute; inset: 0; background: rgba(5,7,11,0.42); transition: background 0.2s; }
+    .slide-vidposter:hover::before { background: rgba(5,7,11,0.22); }
+    .slide-vidposter .pbtn { position: absolute; z-index: 2; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 46px; height: 46px; border-radius: 50%; background: rgba(205,250,78,0.93); color: #0b0d11; display: flex; align-items: center; justify-content: center; font-size: 1.05rem; padding-left: 3px; }
+    .slide-media .slide-vid-cap { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; }
+    .slide-media .slide-vid-cap a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(205,250,78,0.35); }
+    /* highlights now occupy the full right column, centred beside the page */
+    .slide-feature .slide-highlights { margin: 0; align-self: start; }
+    .slide-feature .slide-highlights .slide-hl-label { font-size: 0.62rem; margin-bottom: 0.7rem; }
+    .slide-feature .slide-highlights ul { gap: 0.7rem; }
+    .slide-feature .slide-highlights li { font-size: 0.88rem; line-height: 1.5; padding-left: 1.15rem; }
+    .slide-feature .slide-highlights li::before { top: 0.55em; width: 6px; height: 6px; }
+    @media (max-width: 1180px) {
+      .slide-feature { grid-template-columns: 1fr; }
+      .slide-feature .slide-highlights { align-self: start; }
+    }
     .slide-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.6rem; border-top: 1px solid var(--rule); padding-top: 0.7rem; }
     .slide-news-row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
     .slide-news { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(233,234,228,0.5); text-decoration: none; border-bottom: 1px solid var(--rule); transition: color 0.2s, border-color 0.2s; }
@@ -142,13 +190,16 @@
     .slide-readmore:hover { background: #d9ff67; }
     .slide-readmore:active { transform: translateY(1px); }
     .slide-footer { display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; border-top: 1px solid var(--rule); flex-shrink: 0; }
-    .slide-dots { display: flex; gap: 0.5rem; }
-    .slide-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.2); cursor: pointer; transition: background 0.2s; border: none; padding: 0; }
-    .slide-dot.active { background: var(--accent); }
+    .slide-navbar { display: flex; align-items: center; gap: 0.55rem; }
+    .slide-navbtn { display: inline-flex; align-items: center; gap: 0.4rem; font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink); background: rgba(255,255,255,0.05); border: 1px solid var(--rule-strong); border-radius: 6px; padding: 0.55rem 1rem; cursor: pointer; transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.1s; }
+    .slide-navbtn span { font-size: 0.9rem; line-height: 1; }
+    .slide-navbtn:hover { background: var(--accent); color: #0b0d11; border-color: var(--accent); }
+    .slide-navbtn:active { transform: translateY(1px); }
+    .slide-counter { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.1em; color: var(--muted); min-width: 3.4ch; text-align: center; }
     .slide-link { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em; color: var(--accent); text-decoration: none; }
     .slide-link:hover { text-decoration: underline; }
-    .slide-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.06); border: none; color: rgba(255,255,255,0.45); width: 32px; height: 32px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1rem; transition: background 0.2s, color 0.2s; z-index: 10; }
-    .slide-nav:hover { background: rgba(205,250,78,0.15); color: var(--accent); }
+    .slide-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(10,13,18,0.55); border: 1px solid var(--rule); color: rgba(233,234,228,0.7); width: 44px; height: 44px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; transition: background 0.2s, color 0.2s, border-color 0.2s; z-index: 10; }
+    .slide-nav:hover { background: var(--accent); color: #0b0d11; border-color: var(--accent); }
     .slide-nav.prev { left: 0.75rem; }
     .slide-nav.next { right: 0.75rem; }
 
@@ -345,8 +396,19 @@
           <div class="slide-journal">Nature Communications &middot; 2026</div>
           <div class="slide-title">Decoupling Phase Separation and Fibrillization Preserves Activity of Biomolecular Condensates</div>
           <div class="slide-authors"><strong>Mahendran, T.S.</strong>, Singh, A., Srinivasan, S., …, Parekh, S.H., Banerjee, P.R.</div>
-          <figure class="slide-schematic"><img src="assets/paper1-fig.png" loading="lazy" alt="Figure 1a: protein molecules phase-separate into a functional condensate, but physical aging yields amyloid fibrils"><figcaption class="slide-figcredit">Fig. 1a &middot; Nature Communications 2026 &middot; CC BY 4.0</figcaption></figure>
-          <p class="slide-blurb">A common amino acid, L-arginine, can stop healthy protein droplets from hardening into toxic fibrils &mdash; without dissolving the droplets or disrupting their job.</p>
+          <div class="slide-summary"><span class="slide-summary-label">In plain terms</span><p>A common amino acid, L-arginine, can stop healthy protein droplets from hardening into toxic fibrils &mdash; without dissolving the droplets or disrupting their job.</p></div>
+          <div class="slide-feature">
+            <figure class="slide-fig"><img src="assets/page1-decoupling.jpg" loading="lazy" alt="First page of the Nature Communications paper — journal header, title, author list and abstract."><figcaption class="slide-figcredit">Page 1 &middot; Nature Communications 2026 &middot; CC BY 4.0</figcaption></figure>
+            <div class="slide-highlights">
+              <div class="slide-hl-label">Central findings</div>
+              <ul>
+                <li>The thermodynamic forces that <strong>drive condensate formation are separable</strong> from those that drive their aging into amyloid fibrils.</li>
+                <li>Fibrils <strong>nucleate at the condensate interface</strong>, and once a condensate hardens it loses its activity in microtubule assembly.</li>
+                <li>The metabolite <strong>L-arginine selectively suppresses fibrillization</strong> without perturbing phase separation.</li>
+                <li>L-arginine acts by <strong>enhancing condensate viscoelasticity</strong> &mdash; safe metabolites can preserve condensate function.</li>
+              </ul>
+            </div>
+          </div>
           <div class="slide-actions">
             <div class="slide-news-row"><a class="slide-news" href="https://doi.org/10.1038/s41467-026-69244-z" target="_blank" rel="noopener">Nature Comms &#8599;</a></div>
             <button class="slide-readmore" onclick="openStudy(0)">Read the full story &#8594;</button>
@@ -357,8 +419,19 @@
           <div class="slide-journal">Nature Chemistry &middot; 2025</div>
           <div class="slide-title">Homotypic RNA Clustering Accompanies a Liquid-to-Solid Transition Inside the Core of Multi-Component Biomolecular Condensates</div>
           <div class="slide-authors"><strong>Mahendran, T.S.</strong>, Wadsworth, G.M., Singh, A., Gupta, R., Banerjee, P.R.</div>
-          <figure class="slide-schematic"><img src="assets/paper2-fig.png" loading="lazy" alt="Figure 1k: condensates transition from a homogeneous state to RNA-clustered cores with aging"><figcaption class="slide-figcredit">Fig. 1k &middot; Nature Chemistry 2025 &middot; Mahendran et&nbsp;al.</figcaption></figure>
-          <p class="slide-blurb">Cellular droplets can drive disease-linked RNA into solid clumps &mdash; and an engineered RNA &lsquo;antidote&rsquo; can dissolve them again.</p>
+          <div class="slide-summary"><span class="slide-summary-label">In plain terms</span><p>Cellular droplets can drive disease-linked RNA into solid clumps &mdash; and an engineered RNA &lsquo;antidote&rsquo; can dissolve them again.</p></div>
+          <div class="slide-feature">
+            <figure class="slide-fig"><img src="assets/page1-naturechem.jpg" loading="lazy" onerror="this.onerror=null;this.src='https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41557-025-01847-3/MediaObjects/41557_2025_1847_Fig1_HTML.png';" alt="First page of the Nature Chemistry paper — title, authors and abstract."><figcaption class="slide-figcredit">Page 1 &middot; Nature Chemistry 2025 &middot; Mahendran et&nbsp;al.</figcaption></figure>
+            <div class="slide-highlights">
+              <div class="slide-hl-label">Central findings</div>
+              <ul>
+                <li>Homotypic RNA&ndash;RNA clustering drives a <strong>liquid-to-solid transition in the condensate core</strong>, yielding a solid RNA-rich core inside a fluid shell.</li>
+                <li>The core solidifies through <strong>RNA percolation</strong> &mdash; strands knitting into a single network.</li>
+                <li>Timing is set by <strong>RNA sequence, secondary structure, and repeat length</strong>.</li>
+                <li>A designed <strong>antisense oligonucleotide reverses the clustering</strong> &mdash; a druggable strategy for repeat-expansion disorders.</li>
+              </ul>
+            </div>
+          </div>
           <div class="slide-actions">
             <div class="slide-news-row"><a class="slide-news" href="https://www.buffalo.edu/news/releases/2025/07/disassemble-RNA-clusters-linked-to-neurological-diseases.html" target="_blank" rel="noopener">UB News &#8599;</a><a class="slide-news" href="https://phys.org/news/2025-07-uncovers-rna-clumps-dissolve.html" target="_blank" rel="noopener">Phys.org &#8599;</a><a class="slide-news" href="https://www.sciencedaily.com/releases/2025/08/250807233043.htm" target="_blank" rel="noopener">ScienceDaily &#8599;</a></div>
             <button class="slide-readmore" onclick="openStudy(1)">Read the full story &#8594;</button>
@@ -369,8 +442,19 @@
           <div class="slide-journal">bioRxiv Preprint &middot; 2025</div>
           <div class="slide-title">Viscoelasticity and Interface Properties of Multi-Component Condensates Govern Protein Sequestration and Suppression of Amyloid Formation</div>
           <div class="slide-authors"><strong>Mahendran, T.S.</strong>, Bremer, A., Gui, X., …, Mittag, T., Banerjee, P.R.</div>
-          <figure class="slide-schematic"><img src="assets/paper3-fig.jpg" loading="lazy" alt="Figure 1: 3D render of condensates with amyloid fibrils growing on the outside"><figcaption class="slide-figcredit">Fig. 1 &middot; bioRxiv 2025 &middot; CC BY-NC 4.0</figcaption></figure>
-          <p class="slide-blurb">Against the textbook view, stress-granule-like droplets may suppress &mdash; not seed &mdash; the toxic fibrils linked to ALS.</p>
+          <div class="slide-summary"><span class="slide-summary-label">In plain terms</span><p>Against the textbook view, stress-granule-like droplets may suppress &mdash; not seed &mdash; the toxic fibrils linked to ALS.</p></div>
+          <div class="slide-feature">
+            <figure class="slide-fig"><img src="assets/page1-viscoelasticity.jpg" loading="lazy" alt="First page of the bioRxiv preprint — title, authors and abstract."><figcaption class="slide-figcredit">Page 1 &middot; bioRxiv 2025 &middot; CC BY-NC 4.0</figcaption></figure>
+            <div class="slide-highlights">
+              <div class="slide-hl-label">Central findings</div>
+              <ul>
+                <li>Contrary to the textbook view, condensates <strong>delay and suppress fibril formation</strong> by sequestering the protein, so most fibrils grow <em>outside</em> the droplets.</li>
+                <li><strong>Interfacial coverage</strong> of fibril-forming protein at the droplet surface sets the lag time before fibrils appear.</li>
+                <li><strong>Condensate viscoelasticity</strong> &mdash; how &ldquo;gooey&rdquo; the droplet is &mdash; sets how fast protein leaks out to feed fibril growth.</li>
+                <li>The same rules hold for <strong>G3BP1 + RNA stress-granule mimics</strong> &mdash; stress granules may be protective, not crucibles of disease.</li>
+              </ul>
+            </div>
+          </div>
           <div class="slide-actions">
             <div class="slide-news-row"><a class="slide-news" href="https://doi.org/10.64898/2025.12.29.695806" target="_blank" rel="noopener">bioRxiv &#8599;</a></div>
             <button class="slide-readmore" onclick="openStudy(2)">Read the full story &#8594;</button>
@@ -381,33 +465,103 @@
           <div class="slide-journal">Frontiers in Aging Neuroscience &middot; 2020</div>
           <div class="slide-title">Soluble 4R0N Tau Abrogates Endocytic Vesicular Dynamics</div>
           <div class="slide-authors"><strong>Mahendran, T.S.</strong>, Suresh, S.N., Garimella, L., Manjithaya, R.</div>
-          <div class="slide-schematic"><svg viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Soluble Tau protein disrupting the movement of endocytic vesicles along a transport path">
-  <path d="M20 110 C 90 60, 150 60, 200 96 S 300 120, 320 70" fill="none" stroke="#d4cfc6" stroke-width="2"/>
-  <circle cx="60" cy="92" r="11" fill="#f5f2ed" stroke="#b85c2a" stroke-width="1.6"/>
-  <circle cx="120" cy="74" r="11" fill="#f5f2ed" stroke="#b85c2a" stroke-width="1.6"/>
-  <circle cx="210" cy="92" r="11" fill="#f5f2ed" stroke="#b85c2a" stroke-width="1.6"/>
-  <text x="60" y="120" text-anchor="middle" font-family="monospace" font-size="7" fill="#7a7268">vesicles</text>
-  <g transform="translate(160,78)">
-    <path d="M0 -14 C 8 -8, 8 8, 0 14 C -8 8, -8 -8, 0 -14 Z" fill="#0f0e0c" opacity="0.85"/>
-    <line x1="-16" y1="-16" x2="16" y2="16" stroke="#b85c2a" stroke-width="2.4"/>
-    <text x="0" y="34" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#b85c2a">soluble Tau</text>
-  </g>
-  <text x="300" y="50" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#7a7268">stalled transport</text>
-</svg></div>
-          <p class="slide-blurb">Even before it forms the tangles seen in Alzheimer&rsquo;s, soluble Tau protein can jam the cell&rsquo;s internal delivery system.</p>
+          <div class="slide-summary"><span class="slide-summary-label">In plain terms</span><p>Even before it forms the tangles seen in Alzheimer&rsquo;s, soluble Tau protein can jam the cell&rsquo;s internal delivery system.</p></div>
+          <div class="slide-feature">
+            <figure class="slide-fig"><img src="assets/page1-tau.jpg" loading="lazy" alt="First page of the Frontiers in Aging Neuroscience paper — journal header, title, authors and abstract."><figcaption class="slide-figcredit">Page 1 &middot; Frontiers in Aging Neuroscience 2020 &middot; CC BY 4.0</figcaption></figure>
+            <div class="slide-highlights">
+              <div class="slide-hl-label">Central findings</div>
+              <ul>
+                <li>Soluble (non-aggregated) 4R0N Tau <strong>disrupts endocytic vesicular dynamics</strong> before any tangles form.</li>
+                <li>It reshapes the endolysosomal system &mdash; <strong>RAB5, RAB7 and LAMP1 rise while beclin-1 falls</strong>.</li>
+                <li>This links early soluble Tau to <strong>impaired intracellular transport and recycling</strong>.</li>
+                <li>Implication: Tau can <strong>impair cell function at a pre-fibrillar stage</strong> of neurodegeneration.</li>
+              </ul>
+            </div>
+          </div>
           <div class="slide-actions">
             <div class="slide-news-row"><a class="slide-news" href="https://doi.org/10.3389/fnagi.2020.537712" target="_blank" rel="noopener">Open Access &#8599;</a></div>
             <button class="slide-readmore" onclick="openStudy(3)">Read the full story &#8594;</button>
           </div>
         </div>
 
-        <button class="slide-nav prev" onclick="moveSlide(-1)" aria-label="Previous">&#8592;</button>
-        <button class="slide-nav next" onclick="moveSlide(1)" aria-label="Next">&#8594;</button>
+        <div class="slide">
+          <div class="slide-journal">Molecular Cell &middot; 2025</div>
+          <div class="slide-title">Tunable Metastability of Condensates Reconciles Their Dual Roles in Amyloid Fibril Formation</div>
+          <div class="slide-authors">Das, T., Zaidi, F.K., Farag, M., …, <strong>Mahendran, T.S.</strong>, …, Pappu, R.V., Mittag, T.</div>
+          <div class="slide-summary"><span class="slide-summary-label">In plain terms</span><p>Whether protein droplets protect against or seed toxic fibrils comes down to how easily they &lsquo;melt&rsquo; &mdash; and that property can be tuned in either direction.</p></div>
+          <div class="slide-feature">
+            <figure class="slide-fig"><img src="assets/page1-molcell.jpg" loading="lazy" alt="First page of the Molecular Cell paper — title, authors, graphical abstract and highlights."><figcaption class="slide-figcredit">Page 1 &middot; Molecular Cell 2025</figcaption></figure>
+            <div class="slide-highlights">
+              <div class="slide-hl-label">Central findings</div>
+              <ul>
+                <li>Condensates and fibrils of the A1-LCD protein form through <strong>distinct, separable interactions</strong>.</li>
+                <li>The <strong>interiors of metastable condensates act as sinks</strong> that suppress fibril formation.</li>
+                <li><strong>Disease mutations weaken metastability</strong> and accelerate fibril formation.</li>
+                <li><strong>Designed mutations that boost metastability</strong> rescue the disease-like phenotype.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="slide-actions">
+            <div class="slide-news-row"><a class="slide-news" href="https://doi.org/10.1016/j.molcel.2025.05.011" target="_blank" rel="noopener">Molecular Cell &#8599;</a></div>
+            <button class="slide-readmore" onclick="openStudy(4)">Read the full story &#8594;</button>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-journal">Science Advances &middot; 2025</div>
+          <div class="slide-title">ASPL Couples the Assembly of Stress Granules with Their VCP-Mediated Disassembly</div>
+          <div class="slide-authors">Pareek, G., Li, D., Wang, B., …, <strong>Mahendran, T.S.</strong>, …, Banerjee, P.R., Kim, H.J., Kundu, M.</div>
+          <div class="slide-summary"><span class="slide-summary-label">In plain terms</span><p>A protein called ASPL links how stress granules are built to how they&rsquo;re taken apart &mdash; a balance whose breakdown is tied to neurodegeneration.</p></div>
+          <div class="slide-feature">
+            <figure class="slide-fig"><img src="assets/page1-aspl.jpg" loading="lazy" alt="First page of the Science Advances paper — title, authors and abstract."><figcaption class="slide-figcredit">Page 1 &middot; Science Advances 2025</figcaption></figure>
+            <div class="slide-highlights">
+              <div class="slide-hl-label">Central findings</div>
+              <ul>
+                <li>ASPL <strong>promotes stress-granule assembly</strong> by driving condensation of the scaffold protein G3BP1.</li>
+                <li>The same activity <strong>primes granules for VCP-mediated disassembly</strong>, coupling build-up and breakdown.</li>
+                <li><strong>Disease-linked VCP mutations disrupt this balance</strong>, impairing granule turnover.</li>
+                <li>Connects <strong>stress-granule dynamics to neurodegenerative disease</strong> mechanisms.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="slide-actions">
+            <div class="slide-news-row"><a class="slide-news" href="https://doi.org/10.1126/sciadv.ady3735" target="_blank" rel="noopener">Science Advances &#8599;</a></div>
+            <button class="slide-readmore" onclick="openStudy(5)">Read the full story &#8594;</button>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-journal">Cell Biomaterials &middot; 2026</div>
+          <div class="slide-title">Intrinsically Disordered Protein Coating for Oral Delivery of Peptide Drugs</div>
+          <div class="slide-authors">Ney, M., Sirohi, P., Shmidov, Y., …, <strong>Mahendran, T.S.</strong>, …, Banerjee, P.R., Chilkoti, A.</div>
+          <div class="slide-summary"><span class="slide-summary-label">In plain terms</span><p>A designer protein shell inspired by cellular droplets shields peptide drugs like GLP-1 through stomach acid &mdash; a step toward taking them as a pill instead of an injection.</p></div>
+          <div class="slide-feature">
+            <figure class="slide-fig"><img src="assets/page1-oraldelivery.jpg" loading="lazy" alt="First page of the Cell Biomaterials paper — title, authors, graphical abstract and highlights."><figcaption class="slide-figcredit">Page 1 &middot; Cell Biomaterials 2026</figcaption></figure>
+            <div class="slide-highlights">
+              <div class="slide-hl-label">Central findings</div>
+              <ul>
+                <li>An engineered protein (SynIDP) <strong>responds to gut conditions</strong> to release cargo in the intestine.</li>
+                <li><strong>Temperature drives droplet formation; pH drives solidification</strong> &mdash; two independent knobs.</li>
+                <li>Solidification and larger droplets <strong>protect cargo from stomach acid</strong>.</li>
+                <li><strong>Orally dosed SynIDP-coated GLP-1 lowered weight and blood sugar</strong> in mice.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="slide-actions">
+            <div class="slide-news-row"><a class="slide-news" href="https://doi.org/10.1016/j.celbio.2026.100460" target="_blank" rel="noopener">Cell Biomaterials &#8599;</a></div>
+            <button class="slide-readmore" onclick="openStudy(6)">Read the full story &#8594;</button>
+          </div>
+        </div>
+
       </div>
 
       <div class="slide-footer">
-        <div class="slide-dots" id="dots"></div>
-        <a id="slide-doi-link" class="slide-link" href="#" target="_blank">→ View Paper</a>
+        <div class="slide-navbar">
+          <button class="slide-navbtn" onclick="moveSlide(-1)" aria-label="Previous paper"><span aria-hidden="true">&#8592;</span> Prev</button>
+          <span class="slide-counter" id="slideCounter">1 / 4</span>
+          <button class="slide-navbtn" onclick="moveSlide(1)" aria-label="Next paper">Next <span aria-hidden="true">&#8594;</span></button>
+        </div>
+        <a id="slide-doi-link" class="slide-link" href="#" target="_blank">&#8594; View Paper</a>
       </div>
     </div>
   </section>
@@ -687,7 +841,7 @@
       </div>
       <a href="https://scholar.google.com/citations?user=CfXZktoAAAAJ" target="_blank" class="contact-card">
         <div class="contact-card-label">Google Scholar</div>
-        <div class="contact-card-value">157 Citations</div>
+        <div class="contact-card-value">182 Citations</div>
         <div class="contact-arrow">→</div>
       </a>
       <a href="https://www.linkedin.com/in/tharun-selvam-mahendran" target="_blank" class="contact-card">
@@ -782,6 +936,42 @@
           <p>We found that soluble Tau disrupts the normal movement and dynamics of these vesicles, interfering with the cell's internal transport and recycling machinery.</p>
           <p>The implication: Tau can impair healthy cell function <strong>before</strong> it clumps into visible tangles — adding an early-stage chapter to the story of how Tau contributes to neurodegeneration.</p>
         `
+      },
+      {
+        journal: "Molecular Cell · 2025",
+        title: "Tuning how ‘meltable’ droplets are flips them from harmful to protective",
+        links: [
+          {label: "Read the paper (Molecular Cell)", url: "https://doi.org/10.1016/j.molcel.2025.05.011"}
+        ],
+        body: `
+          <p class="gist">The gist</p>
+          <p>Protein droplets (condensates) can either protect cells or seed the toxic fibrils behind diseases like ALS. This study shows the deciding factor is a tunable physical property &mdash; how <em>metastable</em>, or easily &ldquo;meltable,&rdquo; the droplets are.</p>
+          <p>Using a model prion-like protein, the interior of the droplet acts as a sink that soaks up fibril-forming protein and delays aggregation. Disease-linked mutations make droplets less metastable and more fibril-prone; designer mutations that restore metastability rescue the healthy behavior &mdash; pointing to metastability itself as a therapeutic target.</p>
+        `
+      },
+      {
+        journal: "Science Advances · 2025",
+        title: "A protein switch that links building stress granules to taking them apart",
+        links: [
+          {label: "Read the paper (Science Advances)", url: "https://doi.org/10.1126/sciadv.ady3735"}
+        ],
+        body: `
+          <p class="gist">The gist</p>
+          <p>When cells are stressed they form droplet-like <em>stress granules</em>; a failure to clear these is linked to neurodegeneration. This work identifies a protein, ASPL, that couples how granules assemble with how they are disassembled.</p>
+          <p>ASPL promotes granule formation by helping the scaffold protein G3BP1 condense, and the same interactions set the granules up to be taken apart by the enzyme VCP. Disease-linked VCP mutations break this balance, tying stress-granule turnover directly to neurodegenerative disease.</p>
+        `
+      },
+      {
+        journal: "Cell Biomaterials · 2026",
+        title: "Borrowing condensate physics to deliver peptide drugs as a pill",
+        links: [
+          {label: "Read the paper (Cell Biomaterials)", url: "https://doi.org/10.1016/j.celbio.2026.100460"}
+        ],
+        body: `
+          <p class="gist">The gist</p>
+          <p>Peptide drugs like GLP-1 usually have to be injected because stomach acid destroys them. This study borrows the physics of cellular condensates to build a protective protein coating that survives the gut.</p>
+          <p>An engineered intrinsically disordered protein (SynIDP) forms liquid droplets when warmed and solidifies as pH changes, shielding its cargo in stomach acid and releasing it in the intestine. Orally dosed, SynIDP-coated GLP-1 lowered body weight and blood sugar in mice &mdash; a proof of concept for pill-based delivery of peptide drugs.</p>
+        `
       }
     ];
 
@@ -806,39 +996,37 @@
 
     // ── Slideshow ──
     const slides = document.querySelectorAll('.slide');
-    const dotsContainer = document.getElementById('dots');
+    const counter = document.getElementById('slideCounter');
     const doiLink = document.getElementById('slide-doi-link');
 
     const dois = [
       'https://doi.org/10.1038/s41467-026-69244-z',
       'https://doi.org/10.1038/s41557-025-01847-3',
       'https://doi.org/10.64898/2025.12.29.695806',
-      'https://doi.org/10.3389/fnagi.2020.537712'
+      'https://doi.org/10.3389/fnagi.2020.537712',
+      'https://doi.org/10.1016/j.molcel.2025.05.011',
+      'https://doi.org/10.1126/sciadv.ady3735',
+      'https://doi.org/10.1016/j.celbio.2026.100460'
     ];
 
     let current = 0;
     let timer;
 
-    // Build dots
-    slides.forEach((_, i) => {
-      const d = document.createElement('button');
-      d.className = 'slide-dot' + (i === 0 ? ' active' : '');
-      d.onclick = () => { goTo(i); resetTimer(); };
-      dotsContainer.appendChild(d);
-    });
+    if (counter) counter.textContent = '1 / ' + slides.length;
 
     function goTo(n) {
       slides[current].classList.remove('active');
-      dotsContainer.children[current].classList.remove('active');
       current = (n + slides.length) % slides.length;
       slides[current].classList.add('active');
-      dotsContainer.children[current].classList.add('active');
+      slides[current].scrollTop = 0;
+      if (counter) counter.textContent = (current + 1) + ' / ' + slides.length;
       if (doiLink) doiLink.href = dois[current] || '#';
     }
 
     window.moveSlide = function(dir) { goTo(current + dir); resetTimer(); };
 
-    function resetTimer() { clearInterval(timer); timer = setInterval(() => goTo(current + 1), 6000); }
+    // Auto-rotate disabled: each slide now holds a full figure, key findings and a video to read/watch.
+    function resetTimer() { clearInterval(timer); }
     resetTimer();
 
     // ── Email obfuscation ──
